@@ -4,7 +4,7 @@ use warnings;
 use lib 'inc';
 
 use Config::AutoConf;
-use Getopt::Long;
+#use Getopt::Long;
 use Module::Build;
 
 my $mb = Module::Build->new(
@@ -26,10 +26,10 @@ sub _mb_args {
     my @libs;
     my @includes;
 
-    GetOptions(
-        'lib:s@'     => \@libs,
-        'include:s@' => \@includes,
-    );
+    #GetOptions(
+    #    'lib:s@'     => \@libs,
+    #    'include:s@' => \@includes,
+    #);
 
     my %extra = (
         extra_linker_flags => [ map { '-L' . $_ } @libs ],
