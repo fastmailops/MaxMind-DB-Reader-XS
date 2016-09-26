@@ -7,6 +7,9 @@ use Config::AutoConf;
 #use Getopt::Long;
 use Module::Build;
 
+# dist_name => 'MaxMind-DB-Reader-XS'
+# dist_version => '1.000003'
+
 my $mb = Module::Build->new(
     _mb_args(),
     c_source => 'c',
